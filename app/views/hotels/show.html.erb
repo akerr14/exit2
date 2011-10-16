@@ -1,0 +1,160 @@
+<script>
+	$(document).ready(function(){
+			 hotels_show_ready ('<%= if !@hotel.latitude.blank? then @hotel.latitude else 0 end %>','<%= if !@hotel.longitude.blank? then @hotel.longitude else 0 end %>',"<%= @hotel.name %>",'<%= @menu_item %>');
+     });
+</script>
+
+<div class="background-swirl"> <!-- background swirl -->
+	<div class="container">
+		<div id="hotel-show">
+
+
+			<h2><%= @hotel.name %></h2>
+			<h3><%= @hotel.area.try(:name) %></h3>
+			<h3><%= @hotel.city.try(:name) %></h3>
+
+			<%= back_button() %>
+
+			<div id="image-background" class="round">
+				<div id="detail-slides">
+					<div class="slides_container">
+						<% (1..100).each do |i| %>
+							<% hotel_image = @hotel.id.to_s + "_" + i.to_s + ".jpg" %>
+							<% if (@s3files.include?(hotel_image)) then %>
+								<img src="http://s3.amazonaws.com/sublimetravel/<%= hotel_image %>" alt="<%= @hotel.name + i.to_s + " " + @hotel.area.try(:name) + " " + @hotel.city.try(:name) %>">
+							<% end %>
+						<% end %>
+					</div>
+				</div>
+				<div id="map-container">
+				</div>
+				<div id="image-buttons">
+					<div id="images"></div>
+					<div id="map"></div>
+				</div>
+			</div>
+
+			<div class="span-11">
+				<h6>Sublime Says . . .</h6>
+					<%= single_space @hotel.desc %>
+			</div>
+			<div class="push-2 span-11 last">
+				<hr>
+				<div id="more-details">
+					<h5>
+						<%= "From " if @hotel.price_to.blank? %>
+						$<%= number_with_delimiter(@hotel.price, :delimiter => ",") %>
+						<%= ("to $" + number_with_delimiter(@hotel.price_to, :delimiter => ",").to_s) unless @hotel.price_to.blank? %><br>
+					</h5> (AUD) per night,
+					<%= @hotel.price_comment %><br>
+					<div id="book-button">
+					</div>
+					<%= clean_str @hotel.minimum_nights %><%= ' ' unless @hotel.minimum_nights.blank? %><%= clean_str @hotel.inclusions %><br>
+					<hr>
+					<h4>Genre:</h4>
+					<%= @hotel.category.try(:name) %><br>
+					<h4>Style:</h4>
+					<%= @hotel.style.try(:name) %><br>
+					<h4>Rooms:</h4>
+					<%= @hotel.rooms %><br>
+					<hr>
+					<% if @menu_item == :sojourns then %>
+						<h4>Interests:</h4>
+						<%= commas_all(@hotel.interests) %><br>
+						<h4>Setting:</h4>
+						<%= commas_all(@hotel.sojourn_settings) %>
+						<hr>
+					<% end %>
+					<% if !@hotel.amenities.blank? %>
+							<h4>In-room Amenities:</h4>
+							<%= clean_str @hotel.amenities %><br>
+					<% end %>
+					<% if !@hotel.facilities.blank? %>
+						<h4>On-site Facilities:</h4>
+						<%= clean_str @hotel.facilities %><br>
+					<% end %>
+					<% if !@hotel.executive_club.blank? %>
+						<h4>Executive Club:</h4>
+						<%= clean_str @hotel.executive_club %><br>
+					<% end %>
+					<% if !@hotel.restaurants.blank? %>
+						<h4>Restaurants & Bars:</h4>
+						<%= clean_str @hotel.restaurants %><br>
+					<% end %>
+					<% if !@hotel.kids.blank? %>
+						<h4>Kids:</h4>
+						<%= @hotel.kids %><br>
+					<% end %>
+					<% if !@hotel.check_in.blank? %>
+						<h4>Check-in/Check-out:</h4>
+						<%= @hotel.check_in %><br>
+					<% end %>
+					<hr>
+					<% if !@hotel.ideal_for.blank? %>
+						<h4>What We Love:</h4>
+						<%= raw(@hotel.ideal_for) %>
+					<% end %>
+					<% if !@hotel.think_twice.blank? %>
+						<h4>Full Disclosure:</h4>
+						<%= raw(@hotel.think_twice) %>
+					<% end %>
+					<% if !@hotel.minimum_room.blank? %>
+						<h4>Minimum Room for a Sublime Experience:</h4><br>
+						<ul>
+						<li><%= clean_str @hotel.minimum_room %></li>
+						</ul>
+					<% end %>
+					<hr>
+					<h4>Address:</h4>
+					<%= @hotel.address %><br>
+					<% if @menu_item == :sojourns && !@hotel.directions.blank? then %>
+						<h4>From Sydney:</h4>
+						<%= @hotel.directions %><br>
+	  	  	<% end %>
+				</div>
+			</div>
+			<div id="back-button-container" class="span-24">
+				 <%= back_button() %>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+<div id="book-modal">
+	<% if @hotel.ext_hotel_id.blank? then %>
+		<h3> Go to <%= @hotel.name %> website?</h3>
+		<p>
+			Sublime Sydney is still under construction. To enable you to complete the booking process we currently refer you directly to the hotel website.
+		</p>
+		<p>
+			Do you want to open a new browser window with the website for <%= @hotel.name %>?
+		</p>
+		<div id="button-container">
+			<a href="http://<%= @hotel.web %>" rel="nofollow" target="_blank">
+				Yes
+			</a>
+			<button class="simplemodal-close">
+				No
+			</button>
+		</div>
+	<% else %>
+		 <h3> Go to Hotels.com to complete your booking?</h3>
+		<p>
+			Sublime Sydney is still under construction. To enable you to complete the booking process we currently refer you to Hotels.com.
+		</p>
+		<p>
+			Do you want to open a new browser window with the Hotels.com booking page for <%= @hotel.name %>?
+		</p>
+		<div id="button-container">
+			<a href="http://hotelaccommodation.at/sublimetravel?DURL=http://www.hotels.com/hotel/details.html?hotelId=<%= @hotel.ext_hotel_id %>#description"
+				 rel="nofollow" target="_blank">
+				Yes
+			</a>
+			<button class="simplemodal-close">
+				No
+			</button>
+		</div>
+	<% end %>
+</div>

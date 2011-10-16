@@ -1,0 +1,25 @@
+<div class="accordion <%= name %>">
+	<div class="acc-head">
+		<div class="adv-text">
+			<%= name %>
+		</div>
+		<div class="icon icon-plus">
+		</div>
+	</div>
+	<div class="acc-body">
+	<% inst.each do |a | %>
+		<div class="checkbox <%= ("city" + a.city_id.to_s) if name =="Area" %>">  <!-- todo city specific logic -->
+			<table>
+				<td>
+					<%= check_box_tag(id, a.id, (params[param_sel].include?(a.id.to_s) unless params[param_sel].blank?)) %>
+				</td>
+				<td>
+					<%= a.name %>
+				</td>
+			</table>
+		</div>
+	<% end %>
+	</div>
+</div>
+
+

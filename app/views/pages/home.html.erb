@@ -1,0 +1,266 @@
+<script>
+	$(document).ready(function(){
+			 pages_home_ready ();
+     });
+</script>
+
+<div class="background-swirl">
+
+	<section id="home-banner" class="full-width">
+		<div class="container">
+			<div class="span-9 prepend-2">
+				<h1 id="e">Extravagant</h1>
+				<h1 id="b">Boutique</h1>
+				<h1 id="o">Obscure</h1>
+			</div>
+			<div id="home-banner-frame" class="span-13 last">
+				<div id="slides">
+					<div class="slides_container">
+						<% (1..100).each do |i| %>
+							<% hotel_image = "0_" + i.to_s + ".jpg" %>
+							<% if (@s3files.include?(hotel_image)) then %>
+								<img src="http://s3.amazonaws.com/sublimetravel/<%= hotel_image %>" alt="Sydney Boutique Hotel">
+							<% end %>
+						<% end %>
+					</div>
+				</div>
+					<div id="frame">
+					</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="home-content" class="container">
+
+		<div class="span-13 append-2">  <!-- left column -->
+
+			<a href="<%= hotels_path %>">
+				<div class="left-section span-13 pull-1">
+
+					<div class="crescent span-2 push-1">
+						<p>1</p>
+					</div>
+
+					<div id="light" class="span-11 push-1 last">
+						<h2>
+						 Hotels & Villas &ndash; a sumptuous suite or a cozy cottage?
+						</h2>
+						<div class="span-8">
+							<p>
+								Will it be a sumptuous suite overlooking Sydney Harbour?  Or an ultra mod studio in trendy Darlo?
+								Or perhaps a cozy Victorian cottage at laid-back Manly Beach?  Every hotel and villa in the Sublime
+								collection has something special to offer, be it a fantastic location or a vintage claw-footed bathtub.
+								Some of the hotels are large and glamorous, some are small and intimate, all have well-appointed rooms
+								and a welcoming atmosphere.  Search by area or style to find your ideal accommodation.
+							</p>
+						</div>
+
+						<div class="span-3 last">   <!-- light -->
+						</div>
+					</div>
+				</div>
+			</a>
+
+			<a href="<%= sojourns_path %>">
+				<div class="left-section span-13 pull-1">
+
+					<div class="crescent span-2 push-1">
+						<p>2</p>
+					</div>
+
+					<div class="span-11 push-1 last">
+						<h2>
+							Sojourns &ndash; slip away for the weekend . . .  or the week
+						</h2>
+						<p>
+							Drive two hours in most any direction from Sydney and you’ll end up somewhere beautiful.
+							To the west, the Blue Mountains boast some of Australia’s most magnificent scenery - dramatic
+							sandstone gorges, spectacular waterfalls, warren-like caves and some thousand acres of untouched
+							bushland.  With cool nights in summer and the occasional snow in winter, the Blue Mountains are Sydneysiders'
+							favourite weekend retreat.  In recent years, the Slow Food movement has gained momentum here, so
+							never fear, there’s sure to be plenty of organic tucker to keep you going on the bush trails.
+						</p>
+						<p>
+							If wine-tastings and degustations are more your style, you’ll want to head due north to the
+							Hunter Valley, home to some hundred wineries and
+							cellar-door eateries.  For rolling farmland and historic villages, head in the opposite direction to the bucolic wonderland of the Southern Highlands.
+							This verdant strip of coastal hinterland
+							can feel more British than Australian – that is, until you pass a mob of grazing kangaroos
+							or a pair of shrieking, swooping parrots.
+						</p>
+						<p>
+							And while you’re down here in the Antipodes, you might consider extending your holiday
+							to include a trip to the Outback, the Great Barrier Reef or New Zealand’s magical Southern Alps.
+						</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<%= restaurants_path %>">
+				<div class="left-section span-13 pull-1">
+
+					<div class="crescent span-2 push-1">
+						<p>3</p>
+					</div>
+
+					<div class="span-11 push-1 last">
+						<h2>
+							 Wine & Dine &ndash; another day, another degustation . . .
+						</h2>
+
+						<div id="glass" class="span-3 pull-1">
+						</div>
+						<div class="span-9 last">
+							<p>
+								Sydney is a city that takes eating very seriously, though most often in a relaxed,
+								jeans-and-thongs sort of way.  The emphasis is on the food – and, of course, the wine,
+								the beer, the potent cocktails – not the pomp and circumstance of fine dining.
+								That said, there are a good number of restaurants in Sydney where one can expect
+								to be greeted by a tuxedoed maître d’ and served a series of artful towers graced with airy foams.
+							</p>
+						</div>
+						<p>
+							Reservations at top end restaurants are all but essential, especially on the weekend,
+							and can require several weeks’ notice.  A handful of very popular places – think celebrity chefs –
+							don’t take reservations at all, so you’ll have to queue up with the hoi polloi to sample Bill’s
+							famous ricotta hotcakes or Kylie’s crispy prawn wantons.  And even if your accommodation includes
+							breakfast, you’ll want to venture out to a neighbourhood café at least once to experience the local
+							obsession with strong coffees and decadent brekkies.
+						</p>
+					</div>
+				</div>
+			</a>
+
+
+			<a href="<%= days_path %>">
+				<div class="left-section span-13 pull-1">
+
+					<div class="crescent span-2 push-1">
+						<p>4</p>
+					</div>
+
+					<div class="span-11 push-1 last">
+						<h2>
+							Perfect days &ndash; pret-a-porter
+						</h2>
+						<p>
+							We’ve designed twelve perfect days, from gallery hopping in Paddington to bushwalking
+							in Manly to surfing the far-flung beaches of the Pittwater peninsula.  On a clear day,
+							when the sky seems impossibly blue, nothing could be more enticing than a seaplane flight up the coast to
+							Berowra Waters for lunch.  On less promising days, a tour of the arcades and designer shopping
+							galleries in the CBD will delight some, while others might prefer a pub crawl through
+							the Rocks.
+						</p>
+					</div>
+				</div>
+			</a>
+
+			<a href="<%= activities_path %>">
+				<div class="left-section span-13 pull-1">
+
+					<div class="crescent span-2 push-1">
+						<p>5</p>
+					</div>
+
+					<div class="span-11 push-1 last">
+						<h2>
+							The Sublime List
+						</h2>
+						<p>
+							Every city has its requisite sights, its essential activities.
+							Once these are checked off – the Opera House, the ferry to Manly – you’re free
+							to dedicate the rest of your holiday to the shameless pursuit of pleasure.  From bushwalking to
+							shopping, we’ve put together a list of Sydney’s most enticing activities.  Search by
+							interest or by area to create your own perfect days.
+						</p>
+					</div>
+				</div>
+			</a>
+
+		</div>  <!-- left column -->
+
+
+		<div class="span-9 last">  <!-- right column -->
+			<div class="right-section round">
+
+					<h2>
+						What We Love About Sydney
+					</h2>
+					<p>
+						Sydney's a city of intense, dazzling colours, as if painted with a super-saturated palette – brilliant blue for the harbour and sky, lush velvety
+						green for the gardens and parks, sun-struck silver for the skyscrapers, startling red for the
+						lorikeets flying overhead.  And at sunset, when the sky begins to fade, the white arcs of the Opera House take on a
+						magical, opalescent hue, like so many oyster shells turned inside-out.
+					</p>
+					<p>
+						With so much natural beauty, it’s not surprising that Sydneysiders spend a great deal
+						of their leisure time outdoors – swimming, surfing, sailing, running, playing sports
+						of every sort at every age.  They are, perhaps as consequence, a people possessed of
+						great health, vitality and happiness. They tend to speak frankly, dress casually and
+						go about the business of life with great gusto.  Large numbers of foreigners have come
+						to live here, mostly from Great Britain, New Zealand, Italy and Asia.
+						This makes for a very cosmopolitan society, as well as for some marvellously inspired cuisine.
+						Indeed, in recent years Sydney has taken its place among the top dining cities in the world.
+					</p>
+					<p>
+						In addition to gastronomic pleasures and outdoor pursuits, Sydney has much to offer in the
+						way of museums, art galleries, theatre, music and fashion.  To make the most of your time here,
+						spend a few nights in the city centre, then decamp to the beaches or the trendy Eastern Suburbs.
+					</p>
+			</div>
+
+	<!--		<div id="comingsoon">
+			</div>
+	-->
+
+			<!--
+			<div class="right-section round">
+					<h2>
+						Need help...Sublime Concierge
+					</h2>
+					<p>
+					 This is a test.
+					</p>
+			</div>   -->
+
+			<div id="quote" class="round">
+				<p>
+					<span id="q1">The traveler</span>
+					<span id="q2">sees what he sees,</span>
+					<span id="q3">the tourist</span>
+					<span id="q4">sees what he has come to see.<br></span>
+					<span id="q5">– G. K. Chesterton</span>
+				</p>
+			</div>
+
+		</div>
+	</section> <!-- home content -->
+
+
+</div> <!-- background swirl -->
+
+
+<section class="sub-footer full-width">
+
+	<div class="container">
+		<div class="span-24">
+			<h2>
+			About Sublime
+			</h2>
+			<p>
+				We’ve reviewed the finest hotels in Sydney and put together a collection of our favourites –
+				everything from glamorous global giants to intimate B&B’s to extravagant oceanfront villas.
+				We’ve also been traipsing around the countryside in search of the best weekend getaways and
+				have some fantastic sojourns to suggest. Over the next few months, as we “work” to complete
+				the site, we’ll be wining & dining at Sydney’s better cafés and restaurants, with the
+				objective of compiling a short list of recommendations.  And finally, when the last
+				dessert has been daintily devoured and the last espresso sipped, we'll turn our attention
+				to finalising the twelve itineraries that feature in our Perfect Days.
+			</p>
+		</div>
+	</div>
+</section>
+
+
+
+

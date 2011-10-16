@@ -1,0 +1,304 @@
+<script>
+	 $(document).ready(function(){
+			 hotels_index_ready ();
+     });
+</script>
+
+
+<div class="background-swirl"> <!-- background swirl -->
+
+	<section id="hotel-intro" class="full-width">
+		<div class="container">
+			<div class="span-17">
+				<% if @menu_item == :hotels then %>
+					<h2>Find a Sublime Place to Stay in Sydney</h2>
+					<p>
+						When choosing a place to stay in Sydney, there are five main areas to consider.
+						The Rocks & Circular Quay are home to Sydney’s main tourist sites and best views,
+						while the Central Business District is the domain of skyscrapers, bustling cafés and shopping galleries.
+						Just to the east of the city centre, the trendy Eastern Suburbs are the place to stay for a more intimate, villagey experience.
+						And then there’s the beaches – choose between edgy Bondi and laid-back, outdoorsy Manly.
+						  <br><br>
+						Use the Advanced Search to the right if you know where you'd like to stay, or scroll down the page for more detailed descriptions of each area.
+					</p>
+				<% else %>
+					<h2>Slip Away for the Weekend . . . or the Week</h2>
+					<p>
+						Drive two hours in most any direction from Sydney and you’ll end up somewhere beautiful.
+						To the west, the Blue Mountains boast some of Australia’s most magnificent scenery - dramatic
+						sandstone gorges, spectacular waterfalls, warren-like caves and some thousand acres of
+						untouched bushland. If wine-tastings and degustations are more your style, head due north
+						to the epicurean wonderland of the Hunter Valley, home to some hundred wineries and cellar-door
+						eateries.  For rolling farmland and historic villages, head in the opposite direction to the bucolic wonderland of the Southern Highlands.
+
+						<br><br>
+         		And while you’re down here in the Antipodes, you might consider extending your holiday
+						to include a trip to the Outback, the Great Barrier Reef or New Zealand’s magical
+						Southern Alps.
+					</p>
+				<% end %>
+			</div>
+
+			<div id="hotel-filter" class="push-1 span-6 last">
+				<div id="table-pos">
+					<table><tr>
+						<td class="col1"></td>  <!-- left bracket -->
+						<td class="col2">
+							<%= form_tag (if @menu_item == :hotels then hotels_path else sojourns_path end), :method => 'get' do %>
+								<div class="filter-top">
+									<%= label_tag(:hotel_search, "Hotel Name:") %>
+									<%= text_field_tag(:hotel_search, params[:hotel_search], :placeholder => "optional") %>
+
+									<% if @menu_item == :sojourns then %>
+										<%= label_tag(:sojourn_sel, "Location:")%>
+										<%= select_tag(:sojourn_sel, options_for_select([['Near Sydney', 1], ['Australia-wide', 2],['New Zealand', 3]], params[:sojourn_sel]))%>
+									<% end %>
+
+									<%= label_tag(:villa_sel, "Hotels/Villas:")%>
+									<%= select_tag(:villa_sel, options_for_select([['Both', 3],['Hotels', 1], ['Villas', 2]], params[:villa_sel]))%>
+
+									<!--
+									<% label_tag(:traveldates, "Dates:") %>
+									<% text_field_tag(:traveldates, nil, :placeholder => "check in", :size =>10) %>
+									<div class="label_space">&ensp;</div>
+									<% text_field_tag(:traveldates, nil, :placeholder => "check out", :size =>10) %><br>
+
+									<% label_tag(:persons_sel, "Persons:") %>
+									<% select_tag(:persons_sel, options_for_select([['1', 1], ['2', 2],['3', 3],['4', 4],['5', 5]]),
+										{:include_blank => "-"}) %>
+									-->
+
+									<%= submit_tag "", :name => nil, :class => "search-button" %>
+								</div>
+								<div class="advanced">
+									<div class="adv-text">Advanced Search</div>
+									<div class="icon icon-plus"></div>
+								</div>
+
+								<div class="filter-bottom">
+									<%= render :partial => "shared/checkbox", :locals => { :name => "Area", :id=> "area_sel[]", :inst => @area, :param_sel => :area_sel } %>
+									<%= render :partial => "shared/checkbox", :locals => { :name => "Genre", :id=> "category_sel[]", :inst => @category, :param_sel => :category_sel } %>
+									<%= render :partial => "shared/checkbox", :locals => { :name => "Style", :id=> "style_sel[]", :inst => @style, :param_sel => :style_sel } %>
+
+									<% if @menu_item == :sojourns then %>
+										<%= render :partial => "shared/checkbox", :locals => { :name => "Setting", :id=> "setting_sel[]", :inst => @setting, :param_sel => :setting_sel } %>
+										<%= render :partial => "shared/checkbox", :locals => { :name => "Interest", :id=> "interest_sel[]", :inst => @interest, :param_sel => :interest_sel } %>
+									<% end %>
+								</div>
+							<% end %>  <!-- form tag -->
+						</td>
+						<td class="col3"></td> <!-- right bracket -->
+					</tr></table>
+				</div> <!-- table pos -->
+			</div> <!-- hotel filter -->
+		</div>   <!-- container -->
+	</section>    <!-- hotel intro -->
+
+
+	<section id="hotel-list">
+		<% i=1 %>
+		<% @hotels.group_by(&:area).each do |area, hotels| %>
+			<div class="full-width hotel-area">
+				<div class="container">
+					<div class="span-17">
+						<h2><%= area.name %></h2>
+						<p><%= area.short_desc %></p>
+
+						<% if i != @hotels.group_by(&:area).length then %>
+							<div class="scroll-down">
+							</div>
+						<% end %>
+						<% if i != 1 then %>
+							<div class="scroll-up">
+							</div>
+						<% end %>
+						<% i+=1 %>
+					</div>
+				</div>
+			</div>
+
+			<% hotels.each do | hotel |  %>
+				<div class="container">
+					<div class="hotel-index span-17">
+						<a href="<%= if @menu_item == :hotels then hotel_path(hotel) else sojourn_path(hotel) end %>">
+							<div class="span-17 last">
+								<div class="span-9 hotel-image-container">
+									<img class="hotel-image" src="http://s3.amazonaws.com/sublimetravel/<%=hotel.id %>_index.jpg" alt="<%= hotel.name + " " + hotel.area.try(:name) + " " + hotel.city.try(:name) %>">
+									<div class="hotel-border">
+									</div>
+								</div>
+								<div class="span-8 last hotel-title">
+									<table><tr>
+										<td>
+											<h2><%= hotel.name %></h2>
+											<h3><%= hotel.area.try(:name) %></h3>   <!-- try makes this work with a nil object -->
+										</td>
+										<td class="col2"></td>
+									</tr></table>
+									<p>
+										<%= hotel.short_desc %>
+									</p>
+								</div>
+							</div>
+
+							<div class="span-17 last hotel-details">
+								<table><tr>
+									<td width="33%">
+										<h4>Genre:</h4>&ensp;
+										<%= hotel.category.try(:name) %><br>
+										<h4>Style:</h4>&ensp;
+										<%= hotel.style.try(:name) %>
+									</td>
+									<td width="33%">
+										<% if @menu_item == :sojourns then %>
+											<h4>Interests:</h4>&ensp;
+											<%= commas_three(hotel.interests) %><br>
+											<h4>Setting:</h4>&ensp;
+											<%= commas_three(hotel.sojourn_settings) %>
+										<% else %>
+											<h4>Rooms:</h4>&ensp;
+											<%= hotel.rooms %><br>
+										<% end %>
+									</td>
+									<td class="col3" width="33%">
+										<h5>
+											<%= "From " if hotel.price_to.blank? %>
+											$<%= number_with_delimiter(hotel.price, :delimiter => ",") %>
+											<%= ("to $" + number_with_delimiter(hotel.price_to, :delimiter => ",").to_s) unless hotel.price_to.blank? %><br>
+										</h5>
+											(AUD) per night
+									</td>
+								</tr></table>
+								<% link_to 'Show', hotel %>       <!-- todo - fix this to use the sojourn route -->
+								<div class="decal">
+								</div>
+							</div>
+						</a>
+					</div>  <!-- hotel-index -->
+
+					<% if hotel==@hotels.first then  # only show buttons for first hotel %>
+						<div class="push-1 span-6 last">
+							<% if @menu_item == :hotels then %>
+								<div id="hotel-overview-button" class="hotel-overview-button side-button">
+								</div>
+								<div id="hotel-policy-button" class="hotel-policy-button side-button">
+								</div>
+							<% else %>
+								<div id="hotel-overview-button" class="sojourn-overview-button side-button">
+								</div>
+								<div id="hotel-policy-button" class="sojourn-policy-button side-button">
+								</div>
+							<% end %>
+						</div>
+					<% end %>
+
+				</div> <!-- container -->
+			<% end %>  <!-- hotels.each -->
+		<% end %>   <!-- hotels.group_by -->
+
+		<% if @hotels.blank? then %>
+			<div class="container">
+				<div class="span-17 round" id="no-hotels">
+					There are no hotels that meet your criteria. Please widen your search.
+				</div>
+			</div>
+		<% end %>
+
+		<% if (params[:sojourn_sel] == "2" || params[:sojourn_sel] == "3")  && @menu_item == :sojourns then %>
+			<div class="full-width hotel-area">
+				<div class="container">
+					<div class="span-17">
+						<h2>More Sublime Sojourns Coming Soon ...</h2>
+						<p>We're working to complete the list of sojourns for Australia and New Zealand. Please check back soon.</p>
+					</div>
+				</div>
+			</div>
+		<% end %>
+
+	</section> <!-- hotel list -->
+
+	<div id="filter-spacer">
+	</div>
+
+</div>   <!-- background swirl -->
+
+
+<div id="hotel-overview-modal">
+	<% if @menu_item == :hotels then %>
+		<h3>
+			Find a hotel to suit your style -
+		</h3>
+		<ul>
+			<li><h4>Harbour Views:</h4> Four Seasons, InterContinental, Shangri-La</li>
+			<li><h4>City Vibe:</h4> Westin, Establishment</li>
+			<li><h4>Vintage Chic:</h4> Westin’s Heritage Rooms, Medusa’s Grand Rooms, Beaufort at the Beach</li>
+			<li><h4>Calling All Glitterati:</h4> Establishment</li>
+			<li><h4>Live Like a Local:</h4> Medusa, Beaufort at the Beach, 101 Addison B&B</li>
+			<li><h4>Party On:</h4> Establishment, Blue, Medusa</li>
+			<li><h4>Bliss Out:</h4> Shangri-La’s Chi Spa</li>
+			<li><h4>Celebrities & Oil Barons:</h4> Four Seasons’ Royal, Deluxe Royal & Presidential Suites</li>
+			<li><h4>Dignitaries & Heads of State:</h4> InterContinental’s Australia Suite, Shangri-La’s Royal Suite</li>
+		</ul>
+		<h5>
+			Austerity measures - the best rooms in the city on a budget
+    </h5>
+			<ul>
+				<li><h4>Best Bridge & Harbour Views:</h4> Shangri-La’s Deluxe Grand Harbour View Room</li>
+				<li><h4>Most Spacious:</h4> Sheraton’s City Side Room at 40 sqm & Westin’s Superior Room at 38 - 50 sqm.</li>
+				<li><h4>Most Stylish Décor:</h4> Establishment’s Studio</li>
+		</ul>
+	<% else %>
+		<h3>
+			Find a sojourn to suit your style.
+		</h3>
+		<p>
+			Coming soon ...
+		</p>
+	<% end %>
+</div>
+
+<div id="hotel-policy-modal">
+	<% if @menu_item == :hotels then %>
+		<h3>
+			What makes a hotel Sublime?
+		</h3>
+		<p>
+			From global giants to intimate B&B’s, we’ve reviewed every “luxury” hotel in Sydney and found about
+			a dozen that we can recommend with confidence. Some are truly luxurious, with sumptuous furnishings
+			and impeccable service, while others are outstanding in some other way, be it the views they offer
+			or the neighbourhoods they’re in or the unique style of their interiors. Of course, all the hotels
+			in the Sublime Collection must be thoroughly comfortable, with well-appointed rooms,
+			private bathrooms and superior amenities.
+		</p>
+		<p>
+			It should be mentioned that if a hotel is not listed here, it is because we don’t feel that it
+			offers a Sublime experience. We make a point of being impartial, which means that commercial
+			considerations (such as commission) don’t factor into our selection process.  Our first concern is
+			to provide you, our customers, with an honest, reliable perspective.  With that, we hope to gain
+			your trust and patronage.
+		</p>
+	<% else %>
+		<h3>
+			What makes a sojourn Sublime?
+		</h3>
+		<p>
+			When we imagine a weekend getaway, we think of the ocean, the mountains, the riotous
+			gardens of a country estate.  In short, we think of nature – and then we add pillow-top beds
+			and deep spa baths and candlelit dégustations . . .
+		</p>
+		<p>
+      So what are the criteria for a sublime sojourn? First, the location must be beautiful.
+			Second, the accommodation must be at least a little bit luxurious.  And third, most
+			importantly, the place must have a unique, authentic feel.  Small, locally owned hotels
+			are our preference, though we won’t hesitate to recommend larger resorts so long as they
+			convey a sense of intimacy and harmony with the environment.
+	 	</p>
+		<p>
+			It should be mentioned that if a hotel is not listed here, it is because we don’t feel
+			that it offers a Sublime experience. We make a point of being impartial, which means
+			that commercial considerations (such as commission) don’t factor into our selection
+			process.  Our first concern is to provide you, our customers, with an honest, reliable
+			perspective.  With that, we hope to gain your trust and patronage.
+		</p>
+	<% end %>
+</div>

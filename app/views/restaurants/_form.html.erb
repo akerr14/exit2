@@ -1,0 +1,31 @@
+<%= simple_form_for(@restaurant) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :city_id %>
+    <%= f.input :name %>
+    <%= f.input :short_desc %>
+    <%= f.input :desc %>
+    <%= f.input :address %>
+    <%= f.input :area_id %>
+    <%= f.input :map_id %>
+    <%= f.input :phone %>
+    <%= f.input :email %>
+    <%= f.input :web %>
+    <%= f.input :cuisine_id %>
+    <%= f.input :rating %>
+    <%= f.input :price %>
+    <%= f.input :hours %>
+    <%= f.input :reservation_id %>
+    <%= f.input :wine %>
+    <%= f.input :seats %>
+    <%= f.input :kid_id %>
+    <%= f.input :vegetarian %>
+    <%= f.input :sort %>
+    <%= f.input :release_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

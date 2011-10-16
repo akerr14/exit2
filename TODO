@@ -1,0 +1,141 @@
+Image sizes
+- Show - 800 x 450    - 1.7777  -  75% quality
+- Index - 325 x 200   - 1.625  - 80% quality
+- Home - 400 x 250 - 1.6 - 80% quality
+
+Expenses
+Insurance  - A/VA
+
+Deploy
+- Pix
+- Transfer referral thing to new site.
+- Gemset lock
+
+
+Hotels & Villas:
+
+
+Later...
+When you go back from Australia-wide and NZ, reverts to sydney sojourna
+Fix third westin pic
+Add authentication to s3refresh?
+For index  - hanging indent for details below pics - and make the middle col wider
+For Sojourns - only Sydney - Add all option.
+Backup original inkscape images.
+Dress up display window on show...
+Restyle inputs  fields - jquery?
+Arrows for scrolling pictures (emerge on mouse over)
+Side buttons for sojourns
+Captions for pictures....
+restrict scope of before filer for s3 files?
+Maybe allow you to select - then get pricing for a number.
+Load map in background?
+Details of places are not on map (i.e. not the same detail as a normal google map)
+May need to improve mechanism for finding images - rather than just looking in directory.
+text below map looks funny - when map is selected
+Map all hotels from index page
+Make s3 images private
+Location selection is hard-coded for sojourns.
+Don't start slide show until after first image loaded?
+Restaurants nearby
+Detail hotel page - with room listing.
+hotels nearby...from show page
+List number of nights next to date selectors - after you select dates
+Clear all on menu
+Search engine should return all results for page? (if robot?)
+Kill area_description
+Multi Currency
+Animate circles when they display
+Remove coming soon from AU and NZ sojourns.
+New marker icon for map - http://mapki.com/wiki/Icon_Image_Sets
+Image/map icons have a gap on iPad.
+Overall map color - see Styled Maps in the API - http://code.google.com/apis/maps/documentation/javascript/maptypes.html#StyledMaps
+			http://gmaps-samples-v3.googlecode.com/svn/trunk/styledmaps/wizard/index.html
+
+
+
+Home:
+Text transitons when pic transitions
+Add extravagent boutqiue obscure to sublime logo at the top of the page
+
+Image for logo? Look at Zerply.
+http://www.losttype.com/font/?name=ribbon  - font for numbers...
+rounding for nav bar highlight on IE
+Update text at the bottom
+
+
+General
+- Icon for sublime in browser
+- Google analytics - referrals
+- Move orig pics and db backups out of main folders - or move to a folder and ignore
+- Move pics to amazon
+ - Slugignore - http://devcenter.heroku.com/articles/slug-compiler#ignoring_files
+- S3 fox organiser
+S3 Hub - client
+- heroku databasebackup - http://devcenter.heroku.com/articles/pgbackups
+
+
+
+- Ie6 warning  - test ie7
+From kiwi
+<!--[if IE 6]><div class="IE6-warning-message">
+  <p><strong>Attention Internet Explorer 6 users:</strong> Your browser is not supported by this website. You may continue browsing, however we recommend you <a target="_blank" href="http://www.microsoft.com/windows/internet-explorer">upgrade your browser</a>.</p>
+</div><![endif]-->
+
+Ping sublime site
+swtich web servers - http://devcenter.heroku.com/articles/rails3
+change to progress locally.
+
+- Upgrade rails admin, rails version - remember I can run multile gem versions
+- Jquery ui theme and images in the css folder - delete stuff not required.
+After you have booked a hotel - link to book a flight, book a car.
+	Add link from Beaufort
+-	Add something to header to say that we are still in development - click for more info - or just about?
+- Sprites
+- Remove unused Gems.
+- CNAME mapping for images on amazon - so it appears as sublime
+- Redirect root domain to sub domain (see below).
+- More SEO
+- Indent text like forefathers or zerply.
+- Check search can get to everything - include all hotels
+- Looks at mobify - for mobile delivery
+- Wherever there is a join - need a try.
+- Nice page for when you can't find a route.
+- Free wifi.
+- List best options for various price ranges e.g $200 - sheraton, $300 - four seasons etc.
+- List best sojourn, best hotel on the front page
+- Favourites - email
+- Change ownership - or hide ownership - of URL to sublime travel
+- Can sign up to other affiate programs for ads - dgm australia
+- Seo - use the word hotel-guide - seems to turn up related stuff on google
+- Open graph - look at kiwi collection meta tags in header. Not sure of the benefit
+- Google maps tute has following, stops resize- works better without	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+- Offer a deal for people who book city hotel and sojourn through us - icon for particating sojourns
+
+
+Performance
+http://www.nczonline.net/blog/2009/10/06/domain-sharding-for-all/ - download content from multiple domains. Speeds download of content.
+Set expiration.
+
+
+http://www.getharvest.com/blog/2011/02/easy-rails-asset-handling-with-html5-and-s3/
+
+
+http://devcenter.heroku.com/articles/custom-domains   - redirect root domain to www subdomain.
+			http://stackoverflow.com/questions/5397902/heroku-subdomain-duplicate-content-how-to-redirect-to-domain
+
+Costs - domain name registration - ipowerweb, github, heroku, amazon.
+
+
+- Validations - attr_accs - pg 203 of rails tutorial
+- For lookup tables, if record is nill causes an error - whiny nils
+- Fix routing error to something nicer.
+- disable unused routes
+- IE 5.5, maybe 6 does not support PNG transparency.
+
+
+
+Deployment notes
+
+
+

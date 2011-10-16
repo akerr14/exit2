@@ -1,0 +1,16 @@
+.bundle
+log/*.log
+tmp
+public/images/hotels/orig
+public/images/hotels/*.jpg
+public/images/hotels/*.png
+public/images/hotels/*.gif
+public/images/hotels/*.tif
+public/images/hotels/homepage
+db/backup
+
+
+
+
+
+

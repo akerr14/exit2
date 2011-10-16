@@ -1,0 +1,34 @@
+<%= simple_form_for(@hotel) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :city_id %>
+    <%= f.input :area_id %>
+    <%= f.input :name %>
+    <%= f.input :style %>
+    <%= f.input :short_desc %>
+    <%= f.input :desc %>
+    <%= f.input :address %>
+    <%= f.input :map_id %>
+    <%= f.input :phone %>
+    <%= f.input :email %>
+    <%= f.input :web %>
+    <%= f.input :rooms %>
+    <%= f.input :price %>
+    <%= f.input :inclusions %>
+    <%= f.input :check_in %>
+    <%= f.input :amenities %>
+    <%= f.input :facilities %>
+    <%= f.input :restaurants %>
+    <%= f.input :bars %>
+    <%= f.input :kids %>
+    <%= f.input :ideal_for %>
+    <%= f.input :think_twice %>
+    <%= f.input :sort %>
+    <%= f.input :release_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

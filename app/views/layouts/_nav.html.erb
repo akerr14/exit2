@@ -1,0 +1,21 @@
+<nav id="panel" class="full-width">   <!-- panel used for stickpanel js -->
+  <div  class="container">
+		<div class="span-24">
+			<ul>
+				<li><%= link_to raw("Hotels&ensp;&amp;&ensp;Villas"), hotels_path, :class => ("current" if @menu_item == :hotels) %></li>
+							<li><span>&ensp;</span><span class="line1"></span><span class="line2"></span></li>
+				<li><%= link_to raw("Sojourns"), sojourns_path, :class => ("current" if @menu_item == :sojourns) %></li>
+							<li><span>&ensp;</span><span class="line1"></span><span class="line2"></span></li>
+				<li><%= link_to raw("Wine&ensp;&amp;&ensp;Dine"), restaurants_path, :class => ("current" if @menu_item == :restaurants) %></li>
+							<li><span>&ensp;</span><span class="line1"></span><span class="line2"></span></li>
+				<li><%= link_to raw("Perfect&ensp;Days"), days_path, :class => ("current" if @menu_item == :days) %></li>
+							<li><span>&ensp;</span><span class="line1"></span><span class="line2"></span></li>
+				<li><%= link_to raw("The&ensp;Sublime&ensp;List"), activities_path, :class => ("current" if @menu_item == :activities), :id => "lastnav" %><span>&ensp;</span></li>
+							<li class="newline">^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^</li>
+				</ul>
+		</div>
+  </div>
+</nav>
+
+
+

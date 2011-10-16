@@ -1,0 +1,16 @@
+
+<div class="accordion">   <!-- todo - refactor to use partial -->
+	<div class="acc-head">
+		<%= name %>
+	</div>
+	<div class="acc-body">
+		<div class="checkbox">
+				<%= check_box_tag(id, "0", (params[param_sel].include?("0") unless params[param_sel].blank?)) %>
+				<%= cb1 %>
+		</div>
+		<div class="checkbox">
+				<%= check_box_tag(id, "1", (params[param_sel].include?("1") unless params[param_sel].blank?)) %>
+				<%= cb2 %>
+		</div>
+	</div>
+</div>
