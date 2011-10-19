@@ -1,4 +1,5 @@
 *.psd
 *.pdf
 spec
-public/images/hotels
+app/assets/images/hotels
+db/*.sqlite3

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,10 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111015015434) do
+ActiveRecord::Schema.define(:version => 20111019103208) do
 
   create_table "activities", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ambiances", :force => true do |t|
+    t.string   "name"
+    t.integer  "sort"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -69,6 +77,13 @@ ActiveRecord::Schema.define(:version => 20111015015434) do
 
   create_table "days", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "genres", :force => true do |t|
+    t.string   "name"
+    t.integer  "sort"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -182,6 +197,9 @@ ActiveRecord::Schema.define(:version => 20111015015434) do
     t.integer  "release_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "genre_id"
+    t.integer  "ambiance_id"
+    t.text     "notes"
   end
 
   create_table "s3_files", :force => true do |t|

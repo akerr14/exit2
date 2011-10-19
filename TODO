@@ -7,8 +7,14 @@ Expenses
 Insurance  - A/VA
 
 Deploy
--
--
+- 23% - 7.48
+- 25% - 9.47
+- 36% - 19.72
+
+Chnage bundle to 3.1.1
+Gemfile.lock will lock versions - willl need an old version is 3.1.1 doesn't wokr
+See rails_admin for release note to Heroku
+
 
 Hotels & Villas:
 
@@ -82,8 +88,9 @@ From kiwi
 
 Ping sublime site
 swtich web servers - http://devcenter.heroku.com/articles/rails3
-change to progress locally.
-
+- move heroku hosting to cedar  -http://devcenter.heroku.com/articles/rails3
+- try to reduce slug - gemset are couple to ruby version - I install new version. Create a new gemset in it, and build app from scratch from bundle
+change to progress locally. May need to intall rails first
 - Upgrade rails admin, rails version - remember I can run multile gem versions
 - Jquery ui theme and images in the css folder - delete stuff not required.
 After you have booked a hotel - link to book a flight, book a car.

@@ -13,13 +13,13 @@ RailsAdmin.config do |config|
 
   config.model Restaurant do
     list do
-      sort_by "areas.sort"
-      sort_reverse false
+#      sort_by "areas.sort"
+#      sort_reverse false
       field :id
       field :sort
-      field :city_id
+      field :city
       field :name
-      field :area_id
+      field :area
       field :short_desc
      # field :desc do
      #   formatted_value do
@@ -32,8 +32,8 @@ RailsAdmin.config do |config|
 
   config.model Restaurant do
     edit do
-      field :city_id
-      field :area_id
+      field :city
+      field :area
       field :name
       field :short_desc do
         column_width 800
@@ -48,63 +48,65 @@ RailsAdmin.config do |config|
       field :phone
       field :email
       field :web
-			field :cuisine_id
-      field :rating
+			field :cuisine
+      field :genre
+			field :ambiance
+			field :rating  do
+				label 'Hats'
+			end
       field :price
       field :hours do
         help 'Required - Mon-Sat 7.30am-3pm; Sun 8.30am-3pm  OR  Lunch Mon-Fri noon-2.30pm; Dinner Mon-Sat 6-10pm or Daily noon-11pm'
         column_width 800
       end
-      field :reservation_id
-      field :wine do
-        column_width 800
-      end
-      field :seats do
-        help 'Optional - 104; private room; outdoor seating; wheelchair access; bar'
-        column_width 800
-      end
-      field :kid_id
-      field :vegetarian do
-        help 'Optional - Few options OR Plenty of options OR 6-course degustation menu'
-        column_width 800
-      end
+      field :reservation
+ #     field :wine do
+ #       column_width 800
+ #     end
+ #     field :seats do
+ #       help 'Optional - 104; private room; outdoor seating; wheelchair access; bar'
+ #       column_width 800
+ #     end
+ #     field :kid
+ #     field :vegetarian do
+ #       help 'Optional - Few options OR Plenty of options OR 6-course degustation menu'
+ #       column_width 800
+ #     end
       field :sort
       field :release_id
+			field :notes, :text do
+        ckeditor true
+      end
     end
   end
 
 
 config.model Hotel do
     list do
-      sort_by "areas.sort"
+#      sort_by "areas.sort"
       sort_reverse false
       field :id
       field :sort
-      field :city_id
+      field :city
       field :name
-      field :area_id
+      field :area
       field :short_desc
-     # field :desc do
-     #   formatted_value do
-     #     value.html_safe
-     #   end
-     # end
     end
   end
 
 
   config.model Hotel do
     edit do
-      field :city_id
-      field :area_id
+      field :city
+      field :area
       field :name
       field :villa
 			field :hotel
-			field :category_id do
+			field :category do
         label "Genre"
 				help ''
       end
-			field :style_id do
+			field :style do
         help ''
       end
       #field :city_setting_id

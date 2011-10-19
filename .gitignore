@@ -1,12 +1,12 @@
 .bundle
 log/*.log
 tmp
-public/images/hotels/orig
-public/images/hotels/*.jpg
-public/images/hotels/*.png
-public/images/hotels/*.gif
-public/images/hotels/*.tif
-public/images/hotels/homepage
+app/assets/images/hotels/orig
+app/assets/images/hotels/*.jpg
+app/assets/images/hotels/*.png
+app/assets/images/hotels/*.gif
+app/assets/images/hotels/*.tif
+app/assets/images/hotels/homepage
 db/backup
 
 

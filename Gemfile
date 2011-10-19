@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.6'
+gem 'rails', '3.1.1'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -8,11 +8,21 @@ gem 'rails', '3.0.6'
 #gem 'sqlite3'  - removed prior to deploy - don't think it is required
 
 
+
+group :development, :test do
+	gem 'sqlite3-ruby', :require => 'sqlite3'
+end
+
 group :production do
   gem 'pg'
 end
-group :development, :test do
-	gem 'sqlite3-ruby', :require => 'sqlite3'
+
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~> 3.1.4'
+  gem 'coffee-rails', '~> 3.1.1'
+  gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'devise' # Devise must be required before RailsAdmin
@@ -20,13 +30,13 @@ gem 'devise' # Devise must be required before RailsAdmin
 gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 gem "jquery-rails"
-
+gem "ckeditor"
 
 gem 'geocoder'
 
 gem 'taps'   # supports heroku db push
 
-gem 'aws'
+gem 'aws' # s3
 
 
 # gem 'will_paginate'   - replaced by kaminari
@@ -34,15 +44,10 @@ gem 'aws'
 #gem 'seed-fu'    # seed data
 
 
-
-group :development do
-	gem 'rspec-rails', '2.0.1'
+group :development, :test do
+	gem 'rspec-rails'
 	gem 'simple_form'  # need in dev for generating forms - may need in prod later
-end
-
-group :test do
-	gem 'rspec', '2.0.1'
-	gem 'webrat', '0.7.1'
+#	gem 'webrat'      # think this was in the tutorial
 end
 
 group :production do

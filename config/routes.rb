@@ -1,29 +1,27 @@
 Sublime::Application.routes.draw do
 
+	scope "/sydney" do
+			resources :luxury_hotels, :controller => "hotels", :only => [:index, :show], :as => :hotels
+			resources :sojourns, :controller => "hotels", :only => [:index, :show]
+			resources :restaurants, :only => [:index]
+			resources :days, :only => [:index]
+			resources :activities, :only => [:index]
+		end
+
+		devise_for :users
+
+		# list codes for hotels, but only in dev
+		if Rails.env.development? then
+			match 'geo', :to => 'hotels#geo'
+		end
+		match '/s3refresh',   :to => 's3_files#refresh'
 
 
-  get "s3_files/refresh"
+		#match '/about',   :to => 'pages#about'
 
-  scope "/sydney" do
-		resources :luxury_hotels, :controller => "hotels", :only => [:index, :show], :as => :hotels
-		resources :sojourns, :controller => "hotels", :only => [:index, :show]
-  	resources :restaurants, :only => [:index]
-		resources :days, :only => [:index]
-		resources :activities, :only => [:index]
-	end
+		root :to => 'pages#home'
 
-  devise_for :users
-
-	# list codes for hotels, but only in dev
-	if Rails.env.development? then
-		match 'geo', :to => 'hotels#geo'
-	end
-	match '/s3refresh',   :to => 's3_files#refresh'
-
-
-	#match '/about',   :to => 'pages#about'
-
-	root :to => 'pages#home'
+		mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
 
   # The priority is based upon order of creation:
@@ -75,7 +73,7 @@ Sublime::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
