@@ -1,5 +1,6 @@
 *.psd
 *.pdf
 spec
+test
 app/assets/images/hotels
 db/*.sqlite3
