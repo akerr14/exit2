@@ -22,6 +22,7 @@ http://support.atechmedia.com/codebase/discussions/support/16794-cannot-push-lar
 rake assets:precompile - turn off asset pipeline
 Need to remove all pics from git - to improve deployment performance. Backup separately.
 http://railsapps.github.com/rails-heroku-tutorial.html - consider using mongoDb
+Check JS errors
 
 
 Died at ~ 7MB - 159 object

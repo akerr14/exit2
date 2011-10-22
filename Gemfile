@@ -16,7 +16,7 @@ end
 
 group :production do
   gem 'pg'
-	gem 'thin'
+	gem 'thin'      # production web server
 end
 
 # Gems used only for assets and not required
@@ -33,7 +33,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 gem "jquery-rails"
 gem "ckeditor"
-
+gem 'simple_form'  # need in dev for generating forms - may need in prod later
 gem 'geocoder'
 
 gem 'taps'   # supports heroku db push
@@ -48,7 +48,6 @@ gem 'aws' # s3
 
 group :development, :test do
 	gem 'rspec-rails'
-	gem 'simple_form'  # need in dev for generating forms - may need in prod later
 #	gem 'webrat'      # think this was in the tutorial
 end
 
