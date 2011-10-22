@@ -11,24 +11,14 @@ Deploy
 - 25% - 9.47
 - 36% - 19.72
 
-Gemfile.lock will lock versions - willl need an old version is 3.1.1 doesn't wokr
+
 See rails_admin for release note to Heroku
-Add assets to bundle without.
-Need to switch to the thin webserver  - http://devcenter.heroku.com/articles/rails3
-Move to postgress locally.
-Fix github - check first from command line
+Fix VAs connection
+    Fix github - check first from command line
+     Check JS errors
+Missing icons from jquery ui
+Move to postgress locally?
 
-http://support.atechmedia.com/codebase/discussions/support/16794-cannot-push-large-repository
-rake assets:precompile - turn off asset pipeline
-Need to remove all pics from git - to improve deployment performance. Backup separately.
-http://railsapps.github.com/rails-heroku-tutorial.html - consider using mongoDb
-Check JS errors
-Commented our google in gemfile
-	config.assets.precompile = %w( admin.js admin.css)  - added to production.rb
-
-
-
-Died at ~ 7MB - 159 object
 
 Hotels & Villas:
 

@@ -2,7 +2,7 @@
 /* body */
 
 body {
-	background: url(/assets/oyster.png) center #d9d1c4;
+	background: url(<%= asset_path 'oyster.png' %>) center #d9d1c4;
 	font: 17px  garamond, times, serif;
 	line-height: 22px;
 }
@@ -11,7 +11,7 @@ body {
 
 header.full-width  {   /* full-width is required to override oyster background */
 	height: 150px;
-  background: url(/assets/sublimebg.jpg) center;
+  background: url(<%= asset_path 'sublimebg.jpg' %>) center;
 }
 
 header .container {
@@ -25,7 +25,7 @@ header h1 {
 	left: 0;
   height: 0;
 	width: 530px;
-	background: url("/assets/sublimelogo4.png") no-repeat;
+	background: url(<%= asset_path 'sublimelogo4.png' %>) no-repeat;
 	padding-top:110px;
 	font-size: 40px;  /* not displayed */
 	overflow: hidden;
@@ -33,12 +33,12 @@ header h1 {
 
 
 header h1:hover   {
-	background: url("/assets/sublimelogo5.png") no-repeat;
+	background: url(<%= asset_path 'sublimelogo5.png' %>) no-repeat;
 }
 
 @media screen and (max-device-width: 1024px) {   /* if change image on hover, it disappears on ipad - so keep the same */
     header h1:hover {
-			background: url("/assets/sublimelogo4.png") no-repeat;
+			background: url(<%= asset_path 'sublimelogo4.png' %>) no-repeat;
     }
 }
 
@@ -138,7 +138,7 @@ nav ul .newline {    /*creates a CR so justify works correctly on the line above
 /* HOME PAGE */
 
 #comingsoon {
-	background: url(/assets/comingsoon.png) repeat-y center;
+	background: url(<%= asset_path 'comingsoon.png' %>) repeat-y center;
 	position: absolute;
 	top: 600px;
 	left:0px;
@@ -149,7 +149,7 @@ nav ul .newline {    /*creates a CR so justify works correctly on the line above
 
 
 #home-banner {
-	background: url(/assets/wallpaper4.png) center #b0bdc2;
+	background: url(<%= asset_path 'wallpaper4.png' %>) center #b0bdc2;
   margin: 0 0 80px 0;
 	height: 280px;
   text-align: justify;
@@ -218,7 +218,7 @@ nav ul .newline {    /*creates a CR so justify works correctly on the line above
 	left: 30px;
 	height: 320px;
 	width:480px;
-	background: url(/assets/frame2.png) no-repeat;
+	background: url(<%= asset_path 'frame2.png' %>) no-repeat;
 	z-index: 100;
 }
 
@@ -232,7 +232,7 @@ nav ul .newline {    /*creates a CR so justify works correctly on the line above
 }
 
 #home-content .crescent {
-	background: url(/assets/4crescent2.png) no-repeat;
+	background: url(<%= asset_path '4crescent2.png' %>) no-repeat;
   height: 56px;
 }
 
@@ -251,22 +251,22 @@ nav ul .newline {    /*creates a CR so justify works correctly on the line above
 }
 
 #home-content .left-section:hover {
-  background-image: url(/assets/blue_circ.png);
+  background-image: url(<%= asset_path 'blue_circ.png' %>);
 	background-position: 30px 0px;
 	background-repeat: no-repeat;
 }
 
 #home-content #light {
-	background: url(/assets/light.png) 320px 20px no-repeat;
+	background: url(<%= asset_path 'light.png' %>) 320px 20px no-repeat;
 }
 
 #home-content #glass {
-	background: url(/assets/martgls.png) 25px 15px no-repeat;
+	background: url(<%= asset_path 'martgls.png' %>) 25px 15px no-repeat;
 	height: 220px;
 }
 
 #home-content .right-section {
-	background: url(/assets/oyster.png) #d1c8bc;
+	background: url(<%= asset_path 'oyster.png' %>) #d1c8bc;
 	border-color: #d1c8bc;
 	margin: 0 0 60px 0;
 }
@@ -277,7 +277,7 @@ nav ul .newline {    /*creates a CR so justify works correctly on the line above
 
 #home-content #quote {
 	margin-top: 400px;
-	background: url(/assets/oyster.png) #d1c8bc;
+	background: url(<%= asset_path 'oyster.png' %>) #d1c8bc;
 	border-color: #d1c8bc;
 	padding: 60px 2px 30px 2px;
 }
@@ -387,7 +387,7 @@ footer ul #copyright {
 #hotel-intro {
 	margin-bottom: 30px;
 	height: 290px;
-	background: url(/assets/wallpaper4.png) center #b0bdc2;
+	background: url(<%= asset_path 'wallpaper4.png' %>) center #b0bdc2;
 }
 
 #hotel-intro h2 {
@@ -474,7 +474,7 @@ footer ul #copyright {
 	float: right;
 	width: 22px;
 	height:22px;
-	background: url(/assets/hotelbuttons.png) -100px -53px no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) -100px -53px no-repeat;
 }
 
 #hotel-filter .icon-minus {
@@ -482,7 +482,7 @@ footer ul #copyright {
 	float: right;
 	width: 22px;
 	height:22px;
-	background: url(/assets/hotelbuttons.png) -150px -53px no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) -150px -53px no-repeat;
 }
 
 #hotel-filter .acc-body {
@@ -549,12 +549,12 @@ footer ul #copyright {
 	width: 120px;
   height: 35px;
 	border: none;
-	background: url(/assets/hotelbuttons.png) no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) no-repeat;
 	cursor: pointer;
 }
 
 #hotel-filter .filter-top input.search-button:hover {
-	background: url(/assets/hotelbuttons.png) -140px 0 no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) -140px 0 no-repeat;
 }
 
 
@@ -577,7 +577,7 @@ footer ul #copyright {
 	margin-left: 614px;
 	height: 26px;
 	width:26px;
-	background: url(/assets/hotelbuttons.png) 0 -53px no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) 0 -53px no-repeat;
 	cursor: pointer;
 }
 
@@ -587,7 +587,7 @@ footer ul #copyright {
 	margin-left: 644px;
 	height: 26px;
 	width:26px;
-	background: url(/assets/hotelbuttons.png) -50px -53px no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) -50px -53px no-repeat;
 	cursor: pointer;
 }
 
@@ -598,7 +598,7 @@ footer ul #copyright {
 }
 
 .hotel-index:hover {
-	background: url(/assets/blue_circ.png) 330px 5px no-repeat;
+	background: url(<%= asset_path 'blue_circ.png' %>) 330px 5px no-repeat;
 }
 
 .hotel-index .hotel-image-container {
@@ -613,7 +613,7 @@ footer ul #copyright {
 
 .hotel-index .hotel-border {
 	position: absolute;
-	background: url(/assets/hotelbuttons.png) 0 -150px no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) 0 -150px no-repeat;
 	top: 0;
 	left: 0;
 	width: 335px;
@@ -688,13 +688,13 @@ footer ul #copyright {
 .hotel-index .decal {
 	width: 100%;
 	height: 20px;
-	background: url("/assets/decal2.png") center no-repeat;
+	background: url(<%= asset_path 'decal2.png' %>' %>) center no-repeat;
 	margin: 30px 0 10px 0;
 }
 
 #no-hotels {
 	text-align: center;
-	background: url(/assets/oyster.png) #ccc4b9;
+	background: url(<%= asset_path 'oyster.png' %>) #ccc4b9;
 	padding: 20px 0;
 	margin: 50px 0 100px 0;
 }
@@ -708,19 +708,19 @@ footer ul #copyright {
 }
 
 .hotel-overview-button {
-	background: url(/assets/side-buttons-hotels.png) 0 -214px no-repeat;
+	background: url(<%= asset_path 'side-buttons-hotels.png' %>) 0 -214px no-repeat;
 }
 
 .hotel-policy-button {
-	background: url(/assets/side-buttons-hotels.png) 0 0 no-repeat;
+	background: url(<%= asset_path 'side-buttons-hotels.png' %>) 0 0 no-repeat;
 }
 
 .sojourn-overview-button {
-	background: url(/assets/side-buttons-sojourns.png) 0 -214px no-repeat;
+	background: url(<%= asset_path 'side-buttons-sojourns.png' %>) 0 -214px no-repeat;
 }
 
 .sojourn-policy-button {
-	background: url(/assets/side-buttons-sojourns.png) 0 0 no-repeat;
+	background: url(<%= asset_path 'side-buttons-sojourns.png' %>) 0 0 no-repeat;
 }
 
 .hotel-button-clear {    /* used when menu overlaps buttons */
@@ -805,7 +805,7 @@ footer ul #copyright {
 	margin: 0 0 0 5px;
 	width: 26px;
   height: 26px;
-	background: url(/assets/hotelbuttons.png) -250px -53px no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) -250px -53px no-repeat;
 	text-decoration: none;
 	border: none;
 }
@@ -818,7 +818,7 @@ footer ul #copyright {
 
 #hotel-show #image-background {
 	position: relative;
-	background: url(/assets/oyster.png) #c8bfb3;
+	background: url(<%= asset_path 'oyster.png' %>) #c8bfb3;
 	width: 950px;
 	height: 520px;
 	margin-bottom: 30px;
@@ -862,7 +862,7 @@ footer ul #copyright {
 	width:12px;
 	height:0;
 	padding-top: 12px;
-	background-image: url(/assets/hotelbuttons.png);
+	background-image: url(<%= asset_path 'hotelbuttons.png' %>);
 	background-position: -200px -53px;
 	overflow:hidden;
 }
@@ -896,7 +896,7 @@ footer ul #copyright {
 	border: 0;
 	height: 35px;
 	width: 116px;
-	background: url(/assets/hotelbuttons.png) 0 -426px no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) 0 -426px no-repeat;
 	cursor: pointer;
 }
 
@@ -909,7 +909,7 @@ footer ul #copyright {
 	left: 116px;
 	height: 35px;
 	width: 115px;
-	background: url(/assets/hotelbuttons.png) -116px -380px no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) -116px -380px no-repeat;
 	cursor: pointer;
 }
 
@@ -932,12 +932,12 @@ footer ul #copyright {
 	margin: 10px 0 15px 50px ;
 	width: 120px;
   height: 35px;
-	background: url(/assets/hotelbuttons.png) 0 -98px no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) 0 -98px no-repeat;
 	cursor: pointer;
 }
 
 #hotel-show #book-button:hover {
-	background: url(/assets/hotelbuttons.png) -140px -98px no-repeat;
+	background: url(<%= asset_path 'hotelbuttons.png' %>) -140px -98px no-repeat;
 }
 
 #hotel-show h6 {     /* sublime says */
@@ -972,7 +972,7 @@ footer ul #copyright {
 
 /* UNDER CONSTRUCTION PAGE*/
 #construction {
-	background: url(/assets/oyster.png) #ccc4b9;
+	background: url(<%= asset_path 'oyster.png' %>) #ccc4b9;
 	padding-top: 20px;
 	margin: 50px 0 280px 0;
 }
@@ -982,7 +982,7 @@ footer ul #copyright {
 
 
 .background-swirl {
-	background: url(/assets/line4.png) center repeat-y;
+	background: url(<%= asset_path 'line4.png' %>) center repeat-y;
 	padding-top: 40px;
 	position: relative;
 }
@@ -991,7 +991,7 @@ footer ul #copyright {
   left: 0;
   width: 100%;
 	min-width: 950px;
-	background-image: url(/assets/oyster.png);
+	background-image: url(<%= asset_path 'oyster.png' %>);
 }
 
 .round {                               /*  test IE9 */
@@ -1035,7 +1035,7 @@ p {
 
 #simplemodal-container {
 		color:#000;
-		background:url(/assets/light2.png) top right #c8bfb3 no-repeat;
+		background:url(<%= asset_path 'light2.png' %>) top right #c8bfb3 no-repeat;
 		border:5px solid #066e9e;
 		padding: 0;
 		-moz-border-radius:    7px;
@@ -1054,7 +1054,7 @@ p {
 
 #simplemodal-container .modalCloseImg {
 //	display: none;
-	background:url(/assets/hotelbuttons.png) 0 -481px no-repeat;
+	background:url(<%= asset_path 'hotelbuttons.png' %>) 0 -481px no-repeat;
 	width:30px;
 	height:30px;
 	display:inline;

@@ -9,13 +9,13 @@ module ApplicationHelper
 	end
 
 	def clean_str(a)
-    # remove html tags from string
-		a.html_safe.gsub(/<\/?[^>]*>/,'') unless a.blank?
+    # remove html tags from string and mark as html safe
+		a.gsub(/<\/?[^>]*>/,'').html_safe unless a.blank?
 	end
 
 	def single_space(a)
 		# replace nbsp with a regular space.
-		a.html_safe.gsub(/&nbsp;/,' ') unless a.blank?
+		a.gsub(/&nbsp;/,' ').html_safe unless a.blank?
 	end
 
 end
