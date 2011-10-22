@@ -12,6 +12,7 @@ Deploy
 - 36% - 19.72
 
 
+update
 See rails_admin for release note to Heroku
 Fix VAs connection
     Fix github - check first from command line
