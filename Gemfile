@@ -8,6 +8,7 @@ gem 'rails', '3.1.1'
 #gem 'sqlite3'  - removed prior to deploy - don't think it is required
 
 
+gem 'heroku'
 
 group :development, :test do
 	gem 'sqlite3-ruby', :require => 'sqlite3'
@@ -15,6 +16,7 @@ end
 
 group :production do
   gem 'pg'
+	gem 'thin'
 end
 
 # Gems used only for assets and not required
