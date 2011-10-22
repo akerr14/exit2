@@ -23,6 +23,9 @@ rake assets:precompile - turn off asset pipeline
 Need to remove all pics from git - to improve deployment performance. Backup separately.
 http://railsapps.github.com/rails-heroku-tutorial.html - consider using mongoDb
 Check JS errors
+Commented our google in gemfile
+	config.assets.precompile = %w( admin.js admin.css)  - added to production.rb
+
 
 
 Died at ~ 7MB - 159 object
