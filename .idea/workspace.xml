@@ -5,27 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="21e7f1eb-91c9-4ce1-a429-7a637477d2e5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/scaffold.css" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-bg_flat_0_aaaaaa_40x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-bg_flat_75_ffffff_40x100.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-bg_flat_75_ffffff_40x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-bg_glass_55_fbf9ee_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-bg_glass_65_ffffff_1x400.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-bg_glass_65_ffffff_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-bg_glass_75_dadada_1x400.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-bg_glass_75_dadada_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-bg_glass_75_e6e6e6_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-bg_glass_95_fef1ec_1x400.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-icons_222222_256x240.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-icons_222222_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-icons_2e83ff_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-icons_454545_256x240.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-icons_454545_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-icons_888888_256x240.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-icons_888888_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/images/ui-icons_cd0a0a_256x240.png" afterPath="$PROJECT_DIR$/app/assets/stylesheets/images/ui-icons_cd0a0a_256x240.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/assets/stylesheets/smoothness/jquery-ui-1.8.16.custom.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jquery-ui-1.8.16.custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/development.sqlite3" afterPath="$PROJECT_DIR$/db/development.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO" afterPath="$PROJECT_DIR$/TODO" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/application_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
     </list>
     <list id="cf8d5faf-0e90-4c82-bd61-22d34f3d8495" name="Failed commit: Default" comment="before destroy sojourns controller" />
     <ignored path=".idea/workspace.xml" />
@@ -1006,7 +986,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Rails 3.1 - after bamboo deploy (sublime 4)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rails 3.1 - after bamboo deploy (sublime 4)  - all working" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1019,7 +999,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="filter working - before styling" />
     <MESSAGE value="filter working - styles with brackets" />
     <MESSAGE value="search button and filter styling" />
     <MESSAGE value="index pix done" />
@@ -1044,6 +1023,7 @@
     <MESSAGE value="Rails 3.1 - first push" />
     <MESSAGE value="Rails 3.1 - first push + 1" />
     <MESSAGE value="Rails 3.1 - after bamboo deploy (sublime 4)" />
+    <MESSAGE value="Rails 3.1 - after bamboo deploy (sublime 4)  - all working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
