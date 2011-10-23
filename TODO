@@ -27,8 +27,12 @@ Added in application.rb
 		config.assets.initialize_on_precompile = false
 Need to backup pics - now they won't be on git-hub  - AMAZON?
 Slightly confusing when you precompile - need to know what actually live in the directory.
-Right now
+Everything directly under public is meant to be there.
+Under public assets - only images is not meant to be there - this is for jquery UI - everything else is coped there on asset precompile
+Change heroku to not have with assets.
 
+	<%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+Commented out blueprint print from application
 
 
 

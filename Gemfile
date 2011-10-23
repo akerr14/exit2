@@ -5,9 +5,6 @@ gem 'rails', '3.1.1'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-#gem 'sqlite3'  - removed prior to deploy - don't think it is required
-
-
 gem 'heroku'
 
 group :development, :test do
@@ -19,10 +16,11 @@ group :production do
 	gem 'thin'      # production web server
 end
 
+#gem 'therubyracer'  # this is required for assets precompile  - not required on cedar stack
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	gem 'therubyracer'  # this is required for assets precompile  - not required on cedar stack
 	gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
