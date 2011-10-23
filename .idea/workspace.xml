@@ -4,7 +4,7 @@
     <option name="SCOPE_TYPE" value="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21e7f1eb-91c9-4ce1-a429-7a637477d2e5" name="Default" comment="">
+    <list default="true" id="21e7f1eb-91c9-4ce1-a429-7a637477d2e5" name="Default" comment="Rails 3.1 - after bamboo deploy (sublime 4)  - all working">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
