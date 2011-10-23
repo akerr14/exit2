@@ -20,6 +20,17 @@ Fix VAs connection
 Missing icons from jquery ui
 Move to postgress locally?
 
+From Ruby Guide - check
+For faster asset precompiles, you can partially load your application by setting config.assets.initialize_on_precompile to false, though in that case templates cannot see application objects or methods. Heroku requires this to be false.
+Can remove rubyracer if I am not precompiling assets.
+Added in application.rb
+		config.assets.initialize_on_precompile = false
+Need to backup pics - now they won't be on git-hub  - AMAZON?
+Slightly confusing when you precompile - need to know what actually live in the directory.
+Right now
+
+
+
 
 Hotels & Villas:
 

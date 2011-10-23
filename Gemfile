@@ -22,7 +22,8 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.4'
+	gem 'therubyracer'  # this is required for assets precompile  - not required on cedar stack
+	gem 'sass-rails',   '~> 3.1.4'
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
@@ -33,7 +34,7 @@ gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 gem "jquery-rails"
 gem "ckeditor"
-gem 'simple_form'  # need in dev for generating forms - may need in prod later
+gem 'simple_form'  # need in dev for generating forms
 gem 'geocoder'
 
 gem 'taps'   # supports heroku db push
