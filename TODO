@@ -40,6 +40,8 @@ Commented out blueprint print from application
 	<%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
   <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
 
+  retest sort order
+
 
 Hotels & Villas:
 

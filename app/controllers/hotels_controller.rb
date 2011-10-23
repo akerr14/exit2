@@ -10,21 +10,25 @@ class HotelsController < ApplicationController
 			@menu_item = :hotels
 		end
 
+		if @menu_item == :sojourns then
+			@meta_title = "Luxury Hotels | Boutique Hotels | Sydney Sojourns"
+		else
+			@meta_title = "Luxury Hotels | Boutique Hotels | Sydney"
+		end
+
+
 		#	First, get list of hotels in the relevant areas (i.e. hotels - sydney, or sojourns -  out of sydney)
 		# this is used for both filters, and returning the hotels
 	  if @menu_item == :sojourns then
-			hotel_list = Hotel.joins(:area).where("areas.sort" => 100..200, "release_id" => 2).order("areas.sort", "hotels.sort")			# areas out of Sydney todo - city specific logic
+			hotel_list = Hotel.joins(:area).where("areas.sort" => 100..200, "release_id" => 2) #.order("areas.sort", "hotels.sort")			# areas out of Sydney todo - city specific logic
 		else
-			hotel_list = Hotel.joins(:area).where("areas.sort" => 1..99, "release_id" => 2).order("areas.sort", "hotels.sort")				# areas in Sydney
+			hotel_list = Hotel.joins(:area).where("areas.sort" => 1..99, "release_id" => 2) #.order("areas.sort", "hotels.sort")				# areas in Sydney
 		end
 
 		# Get values for filter menu options
 
-		@test = hotel_list.class
-
-
-		@area = hotel_list.select("distinct areas.*")  #.joins(:area).order(:sort)     # get distinct areas from hotel list
-		@category = hotel_list.select("distinct categories.*").joins(:category).order("categories.sort")     # get distinct categories from hotel list
+		@area = hotel_list.select("distinct areas.*").order(:sort)     # get distinct areas from hotel list
+		@category = hotel_list.select("distinct categories.*").joins(:category).order(:sort)     # get distinct categories from hotel list
 		@style = hotel_list.select("distinct styles.*").joins(:style).order(:sort)
 		if @menu_item == :sojourns then
 			@setting = hotel_list.select("distinct sojourn_settings.*").joins(:sojourn_settings).order(:sort)
@@ -65,7 +69,7 @@ class HotelsController < ApplicationController
 		conditions[:interests] = {:id => params[:interest_sel]} unless params[:interest_sel].blank?
 
 		# return hotels based on conditions  - search function is in the model
-		@hotels = hotel_list.where(conditions).search(params[:hotel_search])
+		@hotels = hotel_list.where(conditions).search(params[:hotel_search]).order("areas.sort", "hotels.sort")
 
 		if !params[:interest_sel].blank? then
 			 @hotels = @hotels.select("distinct hotels.*").joins(:interests)   # gets included in the above sql so no need to add where clause.
@@ -77,11 +81,7 @@ class HotelsController < ApplicationController
 		end
 
 
-	  if @menu_item == :sojourns then
-			@meta_title = "Luxury Hotels | Boutique Hotels | Sydney Sojourns"
-		else
-			@meta_title = "Luxury Hotels | Boutique Hotels | Sydney"
-		end
+
 
   	respond_to do |format|
       format.html # index.html.erb
