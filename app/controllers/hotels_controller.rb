@@ -13,15 +13,18 @@ class HotelsController < ApplicationController
 		#	First, get list of hotels in the relevant areas (i.e. hotels - sydney, or sojourns -  out of sydney)
 		# this is used for both filters, and returning the hotels
 	  if @menu_item == :sojourns then
-			hotel_list = Hotel.joins(:area).where("areas.sort" => 100..200, "release_id" => 2).order("areas.sort", "sort")			# areas out of Sydney todo - city specific logic
+			hotel_list = Hotel.joins(:area).where("areas.sort" => 100..200, "release_id" => 2).order("areas.sort", "hotels.sort")			# areas out of Sydney todo - city specific logic
 		else
-			hotel_list = Hotel.joins(:area).where("areas.sort" => 1..99, "release_id" => 2).order("areas.sort", "sort")				# areas in Sydney
+			hotel_list = Hotel.joins(:area).where("areas.sort" => 1..99, "release_id" => 2).order("areas.sort", "hotels.sort")				# areas in Sydney
 		end
 
 		# Get values for filter menu options
 
-		@area = hotel_list.select("distinct areas.*").joins(:area).order(:sort)     # get distinct areas from hotel list
-		@category = hotel_list.select("distinct categories.*").joins(:category).order(:sort)     # get distinct categories from hotel list
+		@test = hotel_list.class
+
+
+		@area = hotel_list.select("distinct areas.*")  #.joins(:area).order(:sort)     # get distinct areas from hotel list
+		@category = hotel_list.select("distinct categories.*").joins(:category).order("categories.sort")     # get distinct categories from hotel list
 		@style = hotel_list.select("distinct styles.*").joins(:style).order(:sort)
 		if @menu_item == :sojourns then
 			@setting = hotel_list.select("distinct sojourn_settings.*").joins(:sojourn_settings).order(:sort)
@@ -29,7 +32,6 @@ class HotelsController < ApplicationController
 		else
 			@setting = hotel_list.select("distinct city_settings.*").joins(:city_setting).order(:sort)
 		end
-
 
 		# Area description
 		@area_desc = AreaDescription

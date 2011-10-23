@@ -13,6 +13,8 @@ Deploy
 
 
 update
+Villa is showing as a category/genre - has no sort.
+Remove test record.
 See rails_admin for release note to Heroku
 Fix VAs connection
     Fix github - check first from command line
@@ -50,6 +52,7 @@ For index  - hanging indent for details below pics - and make the middle col wid
 For Sojourns - only Sydney - Add all option.
 Backup original inkscape images.
 Dress up display window on show...
+Don't think @area_desc is used in the controller.
 Restyle inputs  fields - jquery?
 Arrows for scrolling pictures (emerge on mouse over)
 Side buttons for sojourns
