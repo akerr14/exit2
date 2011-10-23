@@ -34,6 +34,9 @@ Change heroku to not have with assets.
 	<%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
 Commented out blueprint print from application
 
+	<%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
+  <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+	<%= stylesheet_link_tag "application" %>
 
 
 Hotels & Villas:
