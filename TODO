@@ -12,35 +12,30 @@ Deploy
 - 36% - 19.72
 
 
-update
+
 Villa is showing as a category/genre - has no sort.
-Remove test record.
+Google analytics.
 See rails_admin for release note to Heroku
 Fix VAs connection
-    Fix github - check first from command line
-     Check JS errors
-Missing icons from jquery ui
+Fix github - check first from command line
 Move to postgress locally?
-
-From Ruby Guide - check
-For faster asset precompiles, you can partially load your application by setting config.assets.initialize_on_precompile to false, though in that case templates cannot see application objects or methods. Heroku requires this to be false.
-Can remove rubyracer if I am not precompiling assets.
-Added in application.rb
-		config.assets.initialize_on_precompile = false
 Need to backup pics - now they won't be on git-hub  - AMAZON?
+
 Slightly confusing when you precompile - need to know what actually live in the directory.
 Everything directly under public is meant to be there.
 Under public assets - only images is not meant to be there - this is for jquery UI - everything else is coped there on asset precompile
 Change heroku to not have with assets.
-
-	<%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
-Commented out blueprint print from application
-
-
+Rails admin is not being fully pre-compiled - images only.
+Removed the follow
 	<%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
   <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
 
-  retest sort order
+ retest sort order
+ Check sublime logo on mouseover...
+ Set cannonical
+Spell check
+Might need a procdile
+http://ridingrails.net/heroku-rails-3-1-bamboo-cedar/  - instructions on migrating to cedar
 
 
 Hotels & Villas:
