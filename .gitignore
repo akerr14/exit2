@@ -9,7 +9,7 @@ app/assets/images/hotels/*.tif
 app/assets/images/hotels/homepage
 db/backup
 *.dat
-.idea
+public/javascripts
 
 
 

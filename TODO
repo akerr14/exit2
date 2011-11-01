@@ -13,13 +13,17 @@ Deploy
 
 
 
+
+shuttle on website
+
 Villa is showing as a category/genre - has no sort.
 Google analytics.
+Add note re google analytics.
 See rails_admin for release note to Heroku
 Fix VAs connection
 Fix github - check first from command line
-Move to postgress locally?
 Need to backup pics - now they won't be on git-hub  - AMAZON?
+Note that I moved images.
 
 Slightly confusing when you precompile - need to know what actually live in the directory.
 Everything directly under public is meant to be there.
@@ -32,7 +36,6 @@ Removed the follow
 
  retest sort order
  Check sublime logo on mouseover...
- Set cannonical
 Spell check
 Might need a procdile
 http://ridingrails.net/heroku-rails-3-1-bamboo-cedar/  - instructions on migrating to cedar
@@ -110,6 +113,7 @@ From kiwi
 </div><![endif]-->
 
 Ping sublime site
+Move to postgress locally?
 swtich web servers - http://devcenter.heroku.com/articles/rails3
 - move heroku hosting to cedar  -http://devcenter.heroku.com/articles/rails3
 - try to reduce slug - gemset are couple to ruby version - I install new version. Create a new gemset in it, and build app from scratch from bundle
