@@ -25,6 +25,11 @@ Fix github - check first from command line
 Need to backup pics - now they won't be on git-hub  - AMAZON?
 Note that I moved images.
 
+CKedit for rails - https://github.com/fesplugas/rails-ckeditor/blob/master/README.md
+- allows it to work with asset pipeline.   Also ckeditor_assets
+
+
+
 Slightly confusing when you precompile - need to know what actually live in the directory.
 Everything directly under public is meant to be there.
 Under public assets - only images is not meant to be there - this is for jquery UI - everything else is coped there on asset precompile
