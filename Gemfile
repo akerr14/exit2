@@ -11,11 +11,11 @@ gem 'heroku'
 group :production do
   gem 'pg'
 	gem 'thin'      # production web server
-	gem 'rack-google_analytics', :require => "rack/google_analytics"
+	gem 'rack-google_analytics', :require => 'rack/google_analytics'
 end
 
 group :development, :test do
-  gem "sqlite3-ruby", :require => "sqlite3"
+  gem 'sqlite3-ruby', :require => 'sqlite3'
 	gem 'rspec-rails'
 end
 
