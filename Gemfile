@@ -7,14 +7,16 @@ gem 'rails', '3.1.1'
 
 gem 'heroku'
 
-group :development, :test do
-	gem 'sqlite3'
-end
 
 group :production do
   gem 'pg'
 	gem 'thin'      # production web server
 end
+
+group :development, :test do
+  gem "sqlite3-ruby", :require => "sqlite3"
+end
+
 
 #gem 'therubyracer'  # this is required for assets precompile  - not required on cedar stack
 
