@@ -11,10 +11,12 @@ gem 'heroku'
 group :production do
   gem 'pg'
 	gem 'thin'      # production web server
+	gem 'rack-google_analytics', :require => "rack/google_analytics"
 end
 
 group :development, :test do
   gem "sqlite3-ruby", :require => "sqlite3"
+	gem 'rspec-rails'
 end
 
 
@@ -45,17 +47,6 @@ gem 'aws' # s3
 # gem 'will_paginate'   - replaced by kaminari
 # gem 'kaminari'
 #gem 'seed-fu'    # seed data
-
-
-group :development, :test do
-	gem 'rspec-rails'
-#	gem 'webrat'      # think this was in the tutorial
-end
-
-group :production do
-  gem 'rack-google_analytics', :require => "rack/google_analytics"
-end
-
 
 
 # Use unicorn as the web server
