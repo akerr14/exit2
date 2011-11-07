@@ -12,6 +12,7 @@ group :production do
   gem 'pg'
 	gem 'thin'      # production web server
 	gem 'rack-google_analytics', :require => 'rack/google_analytics'
+	gem 'taps'   # supports heroku db push
 end
 
 group :development, :test do
@@ -39,7 +40,6 @@ gem "ckeditor"
 gem 'simple_form'  # need in dev for generating forms
 gem 'geocoder'
 
-gem 'taps'   # supports heroku db push
 
 gem 'aws' # s3
 
