@@ -12,12 +12,12 @@ group :production do
   gem 'pg'
 	gem 'thin'      # production web server
 	gem 'rack-google_analytics', :require => 'rack/google_analytics'
-	gem 'taps'   # supports heroku db push
 end
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
 	gem 'rspec-rails'
+	gem 'taps'   # supports heroku db push
 end
 
 
