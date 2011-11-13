@@ -16,7 +16,7 @@ Deploy
 VA insurance
 Photos
 
-
+Update notes in word
 Google analytics.
 Add note re google analytics.
 See rails_admin for release note to Heroku
@@ -24,6 +24,7 @@ Fix VAs connection
 Fix github - check first from command line
 Need to backup pics - now they won't be on git-hub  - AMAZON?
 Note that I moved images.
+Need to get github working
 
 is there a way to delete precompile
 
