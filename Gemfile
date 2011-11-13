@@ -9,7 +9,7 @@ gem 'heroku'
 
 
 group :production do
-  gem 'pg'
+  gem 'pg'        # postgres
 	gem 'thin'      # production web server
 	gem 'rack-google_analytics', :require => 'rack/google_analytics'
 end
@@ -20,8 +20,6 @@ group :development, :test do
 	gem 'taps'   # supports heroku db push
 end
 
-
-#gem 'therubyracer'  # this is required for assets precompile  - not required on cedar stack
 
 # Gems used only for assets and not required
 # in production environments by default.
