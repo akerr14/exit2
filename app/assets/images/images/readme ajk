@@ -1,0 +1,2 @@
+Needs to be under images subdirectory  - part of jquery UI - these were in the smoothness directory -
+when jquery-ui gets pulled into application.css it expects them in this relative path.

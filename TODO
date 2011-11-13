@@ -16,8 +16,7 @@ Deploy
 VA insurance
 Photos
 
-]
-Villa is showing as a category/genre - has no sort.
+
 Google analytics.
 Add note re google analytics.
 See rails_admin for release note to Heroku
@@ -26,9 +25,12 @@ Fix github - check first from command line
 Need to backup pics - now they won't be on git-hub  - AMAZON?
 Note that I moved images.
 
+is there a way to delete precompile
+
 CKedit for rails - https://github.com/fesplugas/rails-ckeditor/blob/master/README.md
 - allows it to work with asset pipeline.   Also ckeditor_assets
 
+Moved assets to a different place
 
 
 Slightly confusing when you precompile - need to know what actually live in the directory.
@@ -45,6 +47,10 @@ Removed the follow
 Spell check
 Might need a procdile
 http://ridingrails.net/heroku-rails-3-1-bamboo-cedar/  - instructions on migrating to cedar
+
+Villa is showing as a category/genre - has no sort.
+
+
 
 
 Hotels & Villas:

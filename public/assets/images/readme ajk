@@ -1,2 +1,0 @@
-These were in the smoothness directory - I moved up - as when jquery-ui gets pulled into
-application.css it expects them in this relative path.
