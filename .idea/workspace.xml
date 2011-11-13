@@ -113,7 +113,7 @@
       <file leaf-file-name="custom.css.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="389" column="61" selection-start="7328" selection-end="7343" vertical-scroll-proportion="0.33255813">
+            <state line="691" column="15" selection-start="12568" selection-end="12568" vertical-scroll-proportion="0.4627907">
               <folding />
             </state>
           </provider>
@@ -1102,7 +1102,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="389" column="61" selection-start="7328" selection-end="7343" vertical-scroll-proportion="0.33255813">
+        <state line="691" column="15" selection-start="12568" selection-end="12568" vertical-scroll-proportion="0.4627907">
           <folding />
         </state>
       </provider>
