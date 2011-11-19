@@ -16,7 +16,6 @@ Deploy
 VA insurance
 Photos
 
-Update notes in word
 Google analytics.
 Add note re google analytics.
 See rails_admin for release note to Heroku
@@ -181,6 +180,24 @@ Costs - domain name registration - ipowerweb, github, heroku, amazon.
 
 
 Deployment notes
+
+
+
+
+Config notes
+Install new ruby (1.9.2 p180), and then a new rails – each ruby has its own set of gem
+Can have a javascript per controller in 3.1 – improve performance – but probably not necessary
+Added ckeditor gem
+Rails generate ckeditor:install  - install ckeditor
+Change slugignore
+Precompile
+•	Fonts and javascript were copied under public. Might want to move.
+- Public/asset has nothing - these are created on compile
+http://batsov.com/articles/2011/10/30/deploying-rails31-apps-on-celadon-cedar/   - good article on heroku deploy setting
+Added in application.rb
+		config.assets.initialize_on_precompile = false  - without this precompile did not work. Rails guide and others say this is required
+		google analytics call
+Production.rb - config.assets.compile = true  - changed from false- says so in above doc.
 
 
 
