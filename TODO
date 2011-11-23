@@ -16,8 +16,15 @@ Deploy
 VA insurance
 Photos
 
+
+Search is wrapping
 Google analytics.
-Add note re google analytics.
+Get rid of old domains - also - set cannonical - because Imay have test sites
+Check other sites pointing...
+Intercont took a long time - check pic size
+Ensure deploy is up to date
+Read about deploying rails admin.
+Check referral stuff
 See rails_admin for release note to Heroku
 Fix VAs connection
 Fix github - check first from command line
@@ -183,8 +190,6 @@ Deployment notes
 
 
 
-
-Config notes
 Install new ruby (1.9.2 p180), and then a new rails – each ruby has its own set of gem
 Can have a javascript per controller in 3.1 – improve performance – but probably not necessary
 Added ckeditor gem
