@@ -86,7 +86,7 @@
       <file leaf-file-name="TODO" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="17" selection-start="284" selection-end="284" vertical-scroll-proportion="0.5882353">
+            <state line="20" column="8" selection-start="275" selection-end="275" vertical-scroll-proportion="0.5882353">
               <folding />
             </state>
           </provider>
@@ -979,7 +979,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test push for github 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test push for github 4" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -992,7 +992,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Mostly done....working on pics" />
     <MESSAGE value="Ready to deploy!" />
     <MESSAGE value="Ready to deploy - 2" />
     <MESSAGE value="Ready to deploy - 3 - aws s3 working" />
@@ -1017,6 +1016,7 @@
     <MESSAGE value="Test push for github" />
     <MESSAGE value="Test push for github 2" />
     <MESSAGE value="Test push for github 3" />
+    <MESSAGE value="Test push for github 4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1103,7 +1103,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TODO">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="17" selection-start="284" selection-end="284" vertical-scroll-proportion="0.5882353">
+        <state line="20" column="8" selection-start="275" selection-end="275" vertical-scroll-proportion="0.5882353">
           <folding />
         </state>
       </provider>
