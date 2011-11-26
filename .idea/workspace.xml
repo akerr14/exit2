@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="21e7f1eb-91c9-4ce1-a429-7a637477d2e5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TODO" afterPath="$PROJECT_DIR$/TODO" />
     </list>
     <list id="cf8d5faf-0e90-4c82-bd61-22d34f3d8495" name="Failed commit: Default" comment="before destroy sojourns controller" />
     <ignored path=".idea/workspace.xml" />
@@ -85,7 +86,7 @@
       <file leaf-file-name="TODO" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="5" selection-start="272" selection-end="272" vertical-scroll-proportion="0.5882353">
+            <state line="20" column="15" selection-start="282" selection-end="282" vertical-scroll-proportion="0.5882353">
               <folding />
             </state>
           </provider>
@@ -1102,7 +1103,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TODO">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="5" selection-start="272" selection-end="272" vertical-scroll-proportion="0.5882353">
+        <state line="20" column="15" selection-start="282" selection-end="282" vertical-scroll-proportion="0.5882353">
           <folding />
         </state>
       </provider>
