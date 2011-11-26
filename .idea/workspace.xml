@@ -86,7 +86,7 @@
       <file leaf-file-name="TODO" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="6" selection-start="273" selection-end="273" vertical-scroll-proportion="0.5882353">
+            <state line="20" column="17" selection-start="284" selection-end="284" vertical-scroll-proportion="0.5882353">
               <folding />
             </state>
           </provider>
@@ -979,7 +979,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test push for github 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test push for github 3" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -992,7 +992,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Done with dynamic meta tags. Updated hotel field display names." />
     <MESSAGE value="Mostly done....working on pics" />
     <MESSAGE value="Ready to deploy!" />
     <MESSAGE value="Ready to deploy - 2" />
@@ -1017,6 +1016,7 @@
     <MESSAGE value="Fixed wrap in search" />
     <MESSAGE value="Test push for github" />
     <MESSAGE value="Test push for github 2" />
+    <MESSAGE value="Test push for github 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1030,11 +1030,6 @@
     <entry file="file://$PROJECT_DIR$/config/environments/development.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.029850746" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="245" selection-end="245" vertical-scroll-proportion="0.35820895" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile.lock.old">
@@ -1099,9 +1094,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="245" selection-end="245" vertical-scroll-proportion="0.34355828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TODO">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="6" selection-start="273" selection-end="273" vertical-scroll-proportion="0.5882353">
+        <state line="20" column="17" selection-start="284" selection-end="284" vertical-scroll-proportion="0.5882353">
           <folding />
         </state>
       </provider>
