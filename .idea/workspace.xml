@@ -84,19 +84,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TODO" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="TODO" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TODO">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="5" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+            <state line="22" column="7" selection-start="275" selection-end="275" vertical-scroll-proportion="0.64705884">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.08179959">
+            <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -133,8 +133,8 @@
         <option value="$PROJECT_DIR$/app/assets/images/images/readme ajk" />
         <option value="$PROJECT_DIR$/config/environments/production.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.erb" />
-        <option value="$PROJECT_DIR$/TODO" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/TODO" />
       </list>
     </option>
   </component>
@@ -1093,16 +1093,16 @@
         <state line="103" column="33" selection-start="5017" selection-end="5017" vertical-scroll-proportion="-1.2400932" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TODO">
+    <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="5" selection-start="280" selection-end="280" vertical-scroll-proportion="0.0">
+        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
+    <entry file="file://$PROJECT_DIR$/TODO">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="0" selection-start="31" selection-end="31" vertical-scroll-proportion="0.08179959">
+        <state line="22" column="7" selection-start="275" selection-end="275" vertical-scroll-proportion="0.64705884">
           <folding />
         </state>
       </provider>
