@@ -7,7 +7,6 @@ gem 'rails', '3.1.1'
 
 gem 'heroku'
 
-
 group :production do
   gem 'pg'        # postgres
 	gem 'thin'      # production web server
@@ -19,7 +18,6 @@ group :development, :test do
 	gem 'rspec-rails'
 	gem 'taps'   # supports heroku db push
 end
-
 
 # Gems used only for assets and not required
 # in production environments by default.
