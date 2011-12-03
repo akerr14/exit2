@@ -3,65 +3,20 @@ Image sizes
 - Index - 325 x 200   - 1.625  - 80% quality
 - Home - 400 x 250 - 1.6 - 80% quality
 
-Expenses
-Insurance  - A/VA
-
-Deploy
-- 23% - 7.48
-- 25% - 9.47
-- 36% - 19.72
-
-
 
 VA insurance
 Photos
 
-Test      dvrstgth
-test
-test 579   bogo       tes
 
-
-Site map
-Google analytics.
-Get rid of old domains - also - set cannonical - because Imay have test sites
-Check other sites pointing...
-Intercont took a long time - check pic size
-Ensure deploy is up to date
-Read about deploying rails admin.
-Check referral stuff
-See rails_admin for release note to Heroku
 Fix VAs connection
-Fix github - check first from command line
 Need to backup pics - now they won't be on git-hub  - AMAZON?
-Note that I moved images.
-Need to get github working
-
-is there a way to delete precompile
-
-CKedit for rails - https://github.com/fesplugas/rails-ckeditor/blob/master/README.md
-- allows it to work with asset pipeline.   Also ckeditor_assets
-
-Moved assets to a different place
-
-
-Slightly confusing when you precompile - need to know what actually live in the directory.
-Everything directly under public is meant to be there.
-Under public assets - only images is not meant to be there - this is for jquery UI - everything else is coped there on asset precompile
-Change heroku to not have with assets.
-Rails admin is not being fully pre-compiled - images only.
-Removed the follow
-	<%= stylesheet_link_tag 'blueprint/print',  :media => 'print' %>
-  <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie' %><![endif]-->
+Add to beaufort.
 
  retest sort order
  Check sublime logo on mouseover...
-Spell check
-Might need a procdile
-http://ridingrails.net/heroku-rails-3-1-bamboo-cedar/  - instructions on migrating to cedar
 
 Villa is showing as a category/genre - has no sort.
-
-
+text on ie
 
 
 Hotels & Villas:
@@ -137,6 +92,8 @@ From kiwi
 
 Ping sublime site
 Move to postgress locally?
+Site map
+Google analytics.
 swtich web servers - http://devcenter.heroku.com/articles/rails3
 - move heroku hosting to cedar  -http://devcenter.heroku.com/articles/rails3
 - try to reduce slug - gemset are couple to ruby version - I install new version. Create a new gemset in it, and build app from scratch from bundle
@@ -199,8 +156,7 @@ Can have a javascript per controller in 3.1 – improve performance – but prob
 Added ckeditor gem
 Rails generate ckeditor:install  - install ckeditor
 Change slugignore
-Precompile
-•	Fonts and javascript were copied under public. Might want to move.
+•	Fonts and javascript were copied under public.
 - Public/asset has nothing - these are created on compile
 http://batsov.com/articles/2011/10/30/deploying-rails31-apps-on-celadon-cedar/   - good article on heroku deploy setting
 Added in application.rb
@@ -208,5 +164,22 @@ Added in application.rb
 		google analytics call
 Production.rb - config.assets.compile = true  - changed from false- says so in above doc.
 
+ckeditor spellcheck - added the following to config.js  - just * line for toolbar
+  config.toolbar_Easy =
+    [
+        ['Source','-','Preview'],
+        ['Cut','Copy','Paste','PasteText','PasteFromWord',],
+        ['Undo','Redo','-','SelectAll','RemoveFormat'],
+		**		['SpellChecker', 'Scayt' ],
+				['Styles','Format'], ['Subscript', 'Superscript', 'TextColor'], ['Maximize','-','About'], '/',
+        ['Bold','Italic','Underline','Strike'], ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
+        ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+        ['Link','Unlink','Anchor'], ['Image', 'Attachment', 'Flash', 'Embed'],
+        ['Table','HorizontalRule','Smiley','SpecialChar','PageBreak']
+    ];
 
+	// Sets SCAYT to eng.
+	config.scayt_sLang = 'en_GB';
+
+	config.scayt_autoStartup = true;
 

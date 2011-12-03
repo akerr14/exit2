@@ -15,7 +15,7 @@ class Hotel < ActiveRecord::Base
 	def self.search(search)
     if !search.blank?
       # return search list
-      where('hotels.name like ?', "%#{search}%")
+      where('lower(hotels.name) like ?', "%#{search}%")
     else
       # return complete data set as a scope
       scoped

@@ -4,21 +4,23 @@
 	<title><%= @meta_title %></title>
 	<meta name="keywords" content="<%= @meta_keywords %>">
 	<meta name="description" content="<%= @meta_description %>">
+	<link rel="canonical" href="http://www.sublimesydney.com"/>
 
-	<!-- CSS -->
 	<!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
 	<%= stylesheet_link_tag "application" %>
-
-	<!-- JAVASCRIPT-->
 	<%= javascript_include_tag "application" %>
+
+	<%= stylesheet_link_tag '/stylesheets/blueprint/print',  :media => 'print' %>
+  <!--[if lt IE 8]><%= stylesheet_link_tag '/stylesheets/blueprint/ie' %><![endif]-->
+
 	<!-- google maps -->
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false">
 	</script>
 	<!-- google analytics -->
-	<!-- uses rack-goggle_analytics - and added something to application.rb -->
+	<!-- uses rack-goggle_analytics - added code to application.rb -->
 
 	<%= csrf_meta_tag %>
 
