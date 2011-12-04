@@ -157,6 +157,7 @@ Added ckeditor gem
 Rails generate ckeditor:install  - install ckeditor
 Change slugignore
 •	Fonts and javascript were copied under public.
+- Blue is moved under public/stylesheets - so it isn't bundled into the single css file.
 - Public/asset has nothing - these are created on compile
 http://batsov.com/articles/2011/10/30/deploying-rails31-apps-on-celadon-cedar/   - good article on heroku deploy setting
 Added in application.rb
