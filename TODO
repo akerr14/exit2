@@ -7,22 +7,15 @@ Image sizes
 VA insurance
 Photos
 
-
 Fix VAs connection
 Need to backup pics - now they won't be on git-hub  - AMAZON?
-Add to beaufort.
 
- retest sort order
- Check sublime logo on mouseover...
-
+test
+retest sort order
 Villa is showing as a category/genre - has no sort.
-text on ie
 
 
 Hotels & Villas:
-
-
-Later...
 When you go back from Australia-wide and NZ, reverts to sydney sojourna
 Fix third westin pic
 Add authentication to s3refresh?
@@ -73,8 +66,12 @@ Update text at the bottom
 
 
 General
-- Icon for sublime in browser
+admin sort
+
+-  text on ie
+Icon for sublime in browser
 - Google analytics - referrals
+- Need to make all images sprites - so they pre-load
 - Move orig pics and db backups out of main folders - or move to a folder and ignore
 - Move pics to amazon
  - Slugignore - http://devcenter.heroku.com/articles/slug-compiler#ignoring_files
