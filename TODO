@@ -7,6 +7,9 @@ Image sizes
 VA insurance
 Photos
 
+ sublime travel - if you got to sub domains - doesn't redirect
+
+
 Fix VAs connection
 Need to backup pics - now they won't be on git-hub  - AMAZON?
 
@@ -66,8 +69,8 @@ Update text at the bottom
 
 
 General
-admin sort
-
+- Icon - twitter, facebook, ie etc
+-  admin sort - admin page
 -  text on ie
 Icon for sublime in browser
 - Google analytics - referrals
@@ -89,6 +92,9 @@ From kiwi
 
 Ping sublime site
 Move to postgress locally?
+Change meta-descriptions - so they are not duplicates
+https://www.google.com/webmasters/tools/html-suggestions?hl=en&siteUrl=http://www.sublimesydney.com/&probtype=10
+
 Site map
 Google analytics.
 swtich web servers - http://devcenter.heroku.com/articles/rails3
