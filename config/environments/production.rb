@@ -57,4 +57,7 @@ Sublime::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+		# TODO - added for google analytics
+	config.middleware.use("Rack::GoogleAnalytics", :web_property_id => "UA-27843507-1")
 end
