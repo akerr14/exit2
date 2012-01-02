@@ -23,6 +23,7 @@ Google analytics.
 Change description metatag per page - hotel description... + sublime sydney
 Add webmast tools and adwords to new analytics account
 Fix VAs connection
+sort is differtent - postgres locally
 
 test
 retest sort order
@@ -175,7 +176,6 @@ Change slugignore
 http://batsov.com/articles/2011/10/30/deploying-rails31-apps-on-celadon-cedar/   - good article on heroku deploy setting
 Added in application.rb
 		config.assets.initialize_on_precompile = false  - without this precompile did not work. Rails guide and others say this is required
-		google analytics call
 Production.rb - config.assets.compile = true  - changed from false- says so in above doc.
 
 ckeditor spellcheck - added the following to config.js  - just * line for toolbar
