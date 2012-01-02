@@ -8,10 +8,11 @@ gem 'rails', '3.1.1'
 
 gem 'heroku'
 
+# gem 'rack-google_analytics', :require => 'rack/google_analytics'
+
 group :production do
   gem 'pg'        # postgres
 	gem 'thin'      # production web server
-	gem 'rack-google_analytics', :require => 'rack/google_analytics'
 end
 
 group :development, :test do

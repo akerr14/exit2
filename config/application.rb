@@ -50,9 +50,9 @@ module Sublime
 		# TODO - added due to heroku
 		config.assets.initialize_on_precompile = false
 
-	# moved to environment - production.rb
+	#moved to application.html.erb
 	#	if Rails.env == "production"
-  #		config.middleware.use("Rack::GoogleAnalytics", :web_property_id => "UA-27843507-1")
+  #config.middleware.use("Rack::GoogleAnalytics", :web_property_id => "UA-27843507-1", :async => false)
 	#	end
 
   end
